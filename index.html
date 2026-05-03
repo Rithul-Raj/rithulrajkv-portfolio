@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -28,6 +28,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact" class="btn-primary small">Contact Me</a></li>
             </ul>
@@ -44,7 +45,7 @@
                     <h2 class="hero-subtitle">Hello, I'm <span class="text-gradient">Rithul Raj KV</span></h2>
                     <h1 class="hero-title">Engineering Intelligence<br> for the Future.</h1>
                     <p class="hero-desc">
-                        Aspiring AI/ML Engineer & Data Science Enthusiast. Specializing in building intelligent systems
+                        Aspiring AI/ML Engineer &amp; Data Science Enthusiast. Specializing in building intelligent systems
                         with Python, Deep Learning, and Cloud Technologies.
                     </p>
                     <div class="hero-btns">
@@ -97,7 +98,7 @@
 
                 <div class="skills-grid">
                     <div class="skill-category fade-in-up delay-100">
-                        <h3>Core & Languages</h3>
+                        <h3>Core &amp; Languages</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">Java</span>
@@ -109,7 +110,7 @@
                     </div>
 
                     <div class="skill-category fade-in-up delay-200">
-                        <h3>AI & Machine Learning</h3>
+                        <h3>AI &amp; Machine Learning</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Machine Learning</span>
                             <span class="skill-tag">Deep Learning</span>
@@ -120,7 +121,7 @@
                     </div>
 
                     <div class="skill-category fade-in-up delay-300">
-                        <h3>Tools & Cloud</h3>
+                        <h3>Tools &amp; Cloud</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Azure (AI/DP-900)</span>
                             <span class="skill-tag">Google Colab</span>
@@ -140,51 +141,187 @@
                 <div class="section-header fade-in-up">
                     <h2 class="section-title">Featured Projects</h2>
                     <div class="section-line"></div>
+                    <p class="section-subtitle">Real-world builds from my GitHub &mdash; spanning AI, robotics, web, and more.</p>
                 </div>
 
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card fade-in-up">
+                <!-- Filter Tabs -->
+                <div class="project-filters fade-in-up" id="project-filters">
+                    <button class="filter-btn active" data-filter="all" id="filter-all">All Projects</button>
+                    <button class="filter-btn" data-filter="ai-ml" id="filter-ai-ml">AI / ML</button>
+                    <button class="filter-btn" data-filter="robotics" id="filter-robotics">Robotics</button>
+                    <button class="filter-btn" data-filter="web" id="filter-web">Web Dev</button>
+                </div>
+
+                <div class="projects-grid" id="projects-grid">
+
+                    <!-- Project 1: ExceledEdu -->
+                    <div class="project-card fade-in-up" data-category="ai-ml web">
                         <div class="project-content">
-                            <div class="project-type">IoT & AI</div>
-                            <h3 class="project-title">Smart Automation Devices</h3>
+                            <div class="project-type">Full-Stack &amp; AI</div>
+                            <h3 class="project-title">ExceledEdu &mdash; AI Department Portal</h3>
                             <p class="project-desc">
-                                Developed IoT-based smart automation devices integrating sensors and AI-driven control
-                                logic for real-time monitoring and energy optimization.
+                                An AI-powered academic portal for departments, streamlining student-faculty interactions
+                                with resource management, AI-driven assistance, and attendance workflows. Deployed on Netlify.
                             </p>
                             <div class="project-tech">
-                                <span>IoT</span><span>Sensors</span><span>AI Control</span>
+                                <span>JavaScript</span><span>React</span><span>Supabase</span><span>AI</span>
                             </div>
-                            <a href="https://github.com/Rithul-Raj" target="_blank" class="project-link">View Code <span
-                                    class="arrow">→</span></a>
+                            <div class="project-links">
+                                <a href="https://github.com/Rithul-Raj/ExceledEdu-ai-department-portal" target="_blank" class="project-link" id="link-exceled">View Code <span class="arrow">&#8594;</span></a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
-                    <div class="project-card fade-in-up delay-100">
+                    <!-- Project 2: Advanced Vision Line Follower -->
+                    <div class="project-card fade-in-up delay-100" data-category="robotics ai-ml">
                         <div class="project-content">
-                            <div class="project-type">Deep Learning / LLM</div>
-                            <h3 class="project-title">Disease Identification Chatbot</h3>
+                            <div class="project-type">Robotics &amp; Computer Vision</div>
+                            <h3 class="project-title">Advanced Vision Line Follower</h3>
                             <p class="project-desc">
-                                Smart India Hackathon 2025 (Internal). Built an LLM-based chatbot for disease
-                                identification, experimenting with multiple ML models for symptom analysis and AI-driven
-                                decision support.
+                                A vision-based line follower robot using camera input and PID control for autonomous
+                                line tracking and real-time navigation &mdash; no hardcoded thresholds.
                             </p>
                             <div class="project-tech">
-                                <span>Python</span><span>LLMs</span><span>ML Models</span>
+                                <span>Python</span><span>OpenCV</span><span>PID Control</span><span>Robotics</span>
                             </div>
-                            <a href="https://github.com/Rithul-Raj" target="_blank" class="project-link">View Code <span
-                                    class="arrow">→</span></a>
+                            <div class="project-links">
+                                <a href="https://github.com/Rithul-Raj/Advanced-Vision-Line-Follower" target="_blank" class="project-link" id="link-linefollower">View Code <span class="arrow">&#8594;</span></a>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Project 3: Predictive Maintenance -->
+                    <div class="project-card fade-in-up delay-200" data-category="robotics ai-ml">
+                        <div class="project-content">
+                            <div class="project-type">AI &amp; Embedded Systems</div>
+                            <h3 class="project-title">Predictive Maintenance for Robot Motors</h3>
+                            <p class="project-desc">
+                                A system designed to monitor motor health using sensor data (current, vibration,
+                                temperature) and predict failures using threshold-based machine learning logic.
+                            </p>
+                            <div class="project-tech">
+                                <span>C++</span><span>Sensor Fusion</span><span>ML</span><span>IoT</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Rithul-Raj/Predictive-Maintenance-for-Robot-Motors" target="_blank" class="project-link" id="link-predictive">View Code <span class="arrow">&#8594;</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Chest X-Ray Pneumonia Detection -->
+                    <div class="project-card fade-in-up delay-300" data-category="ai-ml">
+                        <div class="project-content">
+                            <div class="project-type">Deep Learning / Medical AI</div>
+                            <h3 class="project-title">Chest X-Ray Pneumonia Detection</h3>
+                            <p class="project-desc">
+                                Automated pneumonia detection from chest X-ray images using transfer learning with
+                                MobileNetV2, achieving high diagnostic accuracy on medical imaging datasets.
+                            </p>
+                            <div class="project-tech">
+                                <span>Python</span><span>TensorFlow</span><span>MobileNetV2</span><span>Transfer Learning</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Rithul-Raj/chest-xray-pneumonia-detection" target="_blank" class="project-link" id="link-xray">View Code <span class="arrow">&#8594;</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Disease Identification Chatbot -->
+                    <div class="project-card fade-in-up" data-category="ai-ml">
+                        <div class="project-content">
+                            <div class="project-type">LLM &amp; NLP</div>
+                            <h3 class="project-title">Disease Identification Chatbot</h3>
+                            <p class="project-desc">
+                                Smart India Hackathon 2025 project. An LLM-based chatbot for symptom-driven disease
+                                identification, experimenting with multiple ML models for AI-driven decision support.
+                            </p>
+                            <div class="project-tech">
+                                <span>Python</span><span>LLMs</span><span>NLP</span><span>ML Models</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Rithul-Raj" target="_blank" class="project-link" id="link-chatbot">View on GitHub <span class="arrow">&#8594;</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Galaxy Stones -->
+                    <div class="project-card fade-in-up delay-100" data-category="web">
+                        <div class="project-content">
+                            <div class="project-type">Web Development</div>
+                            <h3 class="project-title">Galaxy Stones &mdash; Business Website</h3>
+                            <p class="project-desc">
+                                Official webpage for a red laterite stone cutting business, highlighting stone quality,
+                                affordable pricing, and fast delivery services with a professional responsive design.
+                            </p>
+                            <div class="project-tech">
+                                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Rithul-Raj/galaxystones" target="_blank" class="project-link" id="link-galaxystones">View Code <span class="arrow">&#8594;</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- GitHub CTA -->
+                <div class="github-cta fade-in-up">
+                    <a href="https://github.com/Rithul-Raj?tab=repositories" target="_blank" class="btn-secondary github-all-btn" id="btn-github-all">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        View All Repositories on GitHub
+                    </a>
                 </div>
             </div>
         </section>
 
+        
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="experience-card fade-in-up">
+                    <div class="exp-header">
+                        <div class="exp-logo-wrap">
+                            <svg class="exp-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/>
+                            </svg>
+                        </div>
+                        <div class="exp-title-block">
+                            <h3 class="exp-company">Technical Career Education Pvt. Ltd. <span class="exp-badge">Internship</span></h3>
+                            <p class="exp-role">Robotics &amp; Machine Learning Intern</p>
+                            <p class="exp-meta">
+                                <span class="exp-duration">&#128197; Mar 2026 &ndash; May 2026 &nbsp;&bull;&nbsp; 2 Months</span>
+                                <span class="exp-location">&#128205; Mangalore, Karnataka</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="exp-domain-tag">Domain: Predictive Maintenance for Robot Motors</div>
+
+                    <ul class="exp-bullets">
+                        <li>Developed a predictive maintenance system for robot motors using multi-sensor data (current, vibration, temperature)</li>
+                        <li>Integrated <strong>ESP32 microcontroller</strong> for real-time data acquisition and control over motor systems</li>
+                        <li>Utilized temperature sensor, IMU, and current sensor to continuously monitor motor health metrics</li>
+                        <li>Designed threshold-based fault detection logic with automatic safety shutdown on abnormal conditions</li>
+                        <li>Built an interactive <strong>web interface</strong> for live sensor monitoring, alerts, and real-time data visualization</li>
+                        <li>Documented complete implementation, hardware wiring, and workflow on GitHub</li>
+                    </ul>
+
+                    <div class="exp-tech-row">
+                        <span>Python</span><span>ESP32</span><span>C++</span><span>IoT</span><span>Sensor Fusion</span><span>ML</span><span>Web Dashboard</span>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="education" class="section">
             <div class="container">
                 <div class="section-header fade-in-up">
-                    <h2 class="section-title">Education & Certifications</h2>
+                    <h2 class="section-title">Education &amp; Certifications</h2>
                     <div class="section-line"></div>
                 </div>
 
@@ -196,7 +333,7 @@
                             <h3>Bachelor of Computer Applications (BCA)</h3>
                             <h4>Yenepoya University, Mangalore</h4>
                             <p class="gpa">CGPA: 9.3</p>
-                            <p>Specialization in AI/ML, Robotics & IoT.</p>
+                            <p>Specialization in AI/ML, Robotics &amp; IoT.</p>
                         </div>
                     </div>
 
@@ -210,7 +347,7 @@
                                 <li>Microsoft Certified: DP-900 – Azure Data Fundamentals</li>
                                 <li>Smart India Hackathon – Participation Certificate (2025)</li>
                                 <li>IBM Introduction to Machine Learning Specialization (Coursera)</li>
-                                <li>Multiple Coursera Certifications in Python, Machine Learning, & Data Science</li>
+                                <li>Multiple Coursera Certifications in Python, Machine Learning, &amp; Data Science</li>
                             </ul>
                         </div>
                     </div>
@@ -234,7 +371,7 @@
                     <h2>Ready to collaborate?</h2>
                     <p>I am open for internships and entry-level opportunities in AI/ML.</p>
                     <div class="contact-links">
-                        <a href="mailto:rithulrajkv18@gmail.com" class="contact-btn">
+                        <a href="mailto:rithulrajkv18@gmail.com" class="contact-btn" id="btn-email">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
@@ -243,7 +380,7 @@
                             </svg>
                             rithulrajkv18@gmail.com
                         </a>
-                        <a href="https://linkedin.com/in/rithul-raj-kv" target="_blank" class="contact-btn">
+                        <a href="https://linkedin.com/in/rithul-raj-kv" target="_blank" class="contact-btn" id="btn-linkedin">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <path
@@ -254,7 +391,7 @@
                             </svg>
                             LinkedIn
                         </a>
-                        <a href="https://github.com/Rithul-Raj" target="_blank" class="contact-btn">
+                        <a href="https://github.com/Rithul-Raj" target="_blank" class="contact-btn" id="btn-github">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <path
@@ -264,7 +401,7 @@
                             GitHub
                         </a>
                     </div>
-                    <p class="location-text">📍 Kasargod, Kerala, India</p>
+                    <p class="location-text">&#128205; Kasargod, Kerala, India</p>
                 </div>
             </div>
         </section>

@@ -1,4 +1,4 @@
-
+﻿
 // DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
   // Intersection Observer for Fade-in animations
@@ -66,6 +66,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  // ===== Project Filter Tabs =====
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('#projects-grid .project-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update active button
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      projectCards.forEach(card => {
+        const categories = card.getAttribute('data-category') || '';
+        if (filter === 'all' || categories.includes(filter)) {
+          card.classList.remove('hidden');
+          // Re-trigger animation
+          card.classList.remove('visible');
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              observer.observe(card);
+            });
+          });
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
   // Parallax Effect for Orbs (Subtle)
   document.addEventListener('mousemove', (e) => {
     const x = e.clientX / window.innerWidth;
